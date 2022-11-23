@@ -1,0 +1,25 @@
+TeamRole:~/environment/updatetransactionUI (main) $ zip function.zip index.js
+  adding: index.js (deflated 42%)
+TeamRole:~/environment/updatetransactionUI (main) $ aws lambda create-function --function-name UpdateDynamoDBRecords --zip-file fileb://function.zip --handler index.handler --runtime nodejs16.x --role arn:aws:iam::229045938482:role/lambda-dynamodb-role
+{
+    "FunctionName": "UpdateDynamoDBRecords", 
+    "LastModified": "2022-11-22T22:13:49.594+0000", 
+    "RevisionId": "f31fee20-f391-421c-88cd-3aaf3aa1009e", 
+    "MemorySize": 128, 
+    "StateReason": "The function is being created.", 
+    "State": "Pending", 
+    "Version": "$LATEST", 
+    "Role": "arn:aws:iam::229045938482:role/lambda-dynamodb-role", 
+    "Timeout": 3, 
+    "Handler": "index.handler", 
+    "Runtime": "nodejs16.x", 
+    "StateReasonCode": "Creating", 
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    }, 
+    "CodeSha256": "VNLUYA3v0vrjtuZdn9191p3fnM7sK9QmCe5KaI7kNzE=", 
+    "Description": "", 
+    "CodeSize": 500, 
+    "FunctionArn": "arn:aws:lambda:ap-southeast-2:229045938482:function:UpdateDynamoDBRecords", 
+    "PackageType": "Zip"
+}
